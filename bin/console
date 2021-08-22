@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+// application.php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\Command\WebScraperCommand;
+use Symfony\Component\Dotenv\Dotenv;
+
+$application = new Application();
+$application->setVersion('1.0.1');
+$application->add(new WebScraperCommand('scrape'));
+$application->setDefaultCommand('scrape', true);
+// register commands here
+
+
+$application->run();
