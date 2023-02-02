@@ -182,12 +182,6 @@ Example:
         }
         $table->setStyle('box');
         $table->render();
-
-
-
-
-
     }
-
 
 }
